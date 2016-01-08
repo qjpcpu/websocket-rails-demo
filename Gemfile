@@ -38,3 +38,7 @@ end
 gem 'puma'
 gem 'faye-websocket','0.9.2'  # faye-websocket version must be 0.9.2
 gem 'websocket-rails', github: 'qjpcpu/websocket-rails'
+
+
+# devise
+gem 'devise'
