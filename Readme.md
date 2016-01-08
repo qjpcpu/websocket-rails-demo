@@ -2,6 +2,6 @@
 
 ```
 cd websocket-rails-demo && bundle install
-rails Puma
+rails s Puma
 ```
 
