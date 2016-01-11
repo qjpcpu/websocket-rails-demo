@@ -1,6 +1,11 @@
 $ ->
   dispatcher = new WebSocketRails 'localhost:3000/websocket'
   console.log dispatcher
+  dispatcher.on_open = (data) ->
+    $('#text').append("<pre>connected!</prev>")
+  dispatcher.bind 'connection_closed', ->
+    $('#text').append("<pre>connection lost!</prev>")
+
   dispatcher.bind 'user_login', (data) ->
     console.log('Got===>', data)
     $('#text').append("<pre>user_login:#{data.message}</prev>")
